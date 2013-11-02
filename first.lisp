@@ -32,6 +32,19 @@
 (if (listp argument) (format t "Argument is a list.~%") (format t "Argument is not a list.~%"))	
 
 (setq arg1 81)
-(setq arg2 54)
+(setq arg2 0)
 ;;Conditinal to check if two atoms are equal. Note that eq works only with atoms and not lists.
 (if (eq arg1 arg2) (format t "Both arguments are equal.~%") (format t "Both arguments are not equal.~%"))
+;;Conditional to check if the argument is a number or not.
+(if (numberp arg1) (format t "Argument is a number.~%") (format t "Argument is not a number.~%"))
+;;Conditional to check if the argument is zero or not.
+(if (zerop arg2) (format t "Argument evaluates to zero.~%") (format t "Argument does not evaluates to zero.~%"))
+
+(setq decreasing '(5454 554 98 57 49 6 2 1))
+(setq increasing '(1 12 23 54 65 87 98 312 645 798 2134 6578 9898))
+;;Conditional to check strictly descending order.
+(if (> (car decreasing) (cadr decreasing) (caddr decreasing) (cadddr decreasing))
+ (format t "Arguments are in descending order.~%") (format t "Arguments are not in descending order.~%")) 
+;;Conditional to check strictly ascending order.
+(if (< (car increasing) (cadr increasing) (caddr increasing) (cadddr increasing))
+ (format t "Arguments are in ascending order.~%") (format t "Arguments are not in ascending order.~%")) 
