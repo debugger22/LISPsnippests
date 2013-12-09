@@ -11,4 +11,4 @@
 		(return-from resolve (list clause1 clause2))
 )
 
-(print (resolve '(1 -1 2 3 -3) '(2 -8)))
+(print (resolve '(1 -1 2 3 -3) '(2 3 -8)))
