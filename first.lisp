@@ -48,3 +48,16 @@
 ;;Conditional to check strictly ascending order.
 (if (< (car increasing) (cadr increasing) (caddr increasing) (cadddr increasing))
  (format t "Arguments are in ascending order.~%") (format t "Arguments are not in ascending order.~%")) 
+;;Conditional to check for a negative number.
+(if (minusp -10) (format t "Argument is a negative number.~%") (format t "Argument is not a negative number.~%"))
+;;Conditional to check for a nil.
+(if (null nil) (format t "Argument is a nil.~%") (format t "Argument is not a nil.~%"))
+
+(if (and 1 2 3 4 5 5 765 8 nil 789) (format t  "'And' of the data returned true~%") (format t "'And' of the data returned false~%"))
+(if (or nil nil 3 nil) (format t "'Or of the data returned true~%") (format t "'Or' of the data returned false~%"))
+
+;;function to calculate sum of a list
+(defun sum (lst) (format t "The sum is ~s~%" (write-to-string (apply '+ lst))))
+(sum '(1 4 6 4))
+
+;;
